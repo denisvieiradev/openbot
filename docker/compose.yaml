@@ -11,7 +11,7 @@ services:
     restart: unless-stopped
     security_opt:
       # The Docker default profile, with user namespaces for the Electron sandbox.
-      - seccomp=./seccomp.json
+      - seccomp=./docker/seccomp.json
       - no-new-privileges:true
     # Chromium uses shared memory. The Docker default of 64 MB is too small.
     shm_size: 1g
